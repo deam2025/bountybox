@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الحساب</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- زر الشراء -->
+<button class="buy-button" onclick="openPopup()">شراء</button>
+
+<!-- النافذة المنبثقة تغطي الشاشة -->
+<div id="popup-container" class="popup">
+    <div class="popup-content">
+        <h2>التواصل مع البائع</h2>
+        <button class="contact-button whatsapp" onclick="openWhatsApp()">تواصل عبر واتساب</button>
+        <button class="contact-button email" onclick="openEmail()">تواصل عبر البريد الإلكتروني</button>
+        <button class="close-button" onclick="closePopup()">إغلاق</button>
+    </div>
+</div>
+
+<script>
+    // فتح النافذة المنبثقة
+    function openPopup() {
+        document.getElementById("popup-container").style.display = "flex";
+    }
+
+    // إغلاق النافذة المنبثقة
+    function closePopup() {
+        document.getElementById("popup-container").style.display = "none";
+    }
+
+    // فتح الواتساب
+    function openWhatsApp() {
+        const phone = "1234567890"; // أدخل رقم هاتفك
+        window.open(`https://wa.me/${phone}`, "_blank");
+    }
+
+    // فتح البريد الإلكتروني
+    function openEmail() {
+        const email = "example@domain.com"; // أدخل بريدك الإلكتروني
+        window.location.href = `mailto:${email}`;
+    }
+</script>
+
+</body>
+</html>

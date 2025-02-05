@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الحساب</title>
+    <link rel="stylesheet" href="body.css">
+</head>
+<body>
+    <main>
+        <!-- مربع الصور -->
+        <section class="image-gallery">
+            <div class="main-image">
+                <img src="an lk 4.jpg" alt="صورة الحساب الرئيسية" id="mainImage">
+            </div>
+            <div class="thumbnail-images">
+                <img src="an lk 4.jpg" alt="صورة 1" class="thumbnail" onclick="showImage('an lk 4.jpg')">
+                <img src="an lk 4.jpg" alt="صورة 2" class="thumbnail" onclick="showImage('an lk 4.jpg')">
+                <img src="an lk 4.jpg" alt="صورة 4" class="thumbnail" onclick="showImage('an lk 4.jpg')">
+            </div>
+        </section>
+
+        <!-- مربع التفاصيل -->    
+        <section class="account-details">
+            <div class="account-details-container">
+                <div class="account-info">
+            <h2>حساب جواهر اندرويد</h2>
+            <p>معلومات عن الحساب:</p>
+            <ul>
+                <li>الحساب جديد، رانك 1</li>
+                <li>السولو مومو ملعوب</li>
+                <li>الكس فل 70 وبعض الايجان</li>
+                <li>يوجد أكثر من 20 شخصية ★4 نجوم</li>
+                <li>يوجد عناصر للميدال في المخزن</li>
+            </ul>
+            <p>5100- 5000 جوهرة، 800 - 700 حجر</p>
+<!-- زر الشراء -->
+<button class="btn"onclick="openPopup()">شراء</button>
+</button>
+<!-- النافذة المنبثقة تغطي الشاشة -->
+<div id="popup-container" class="popup">
+    <div class="popup-content">
+        <h2>التواصل مع البائع</h2>
+        <button class="contact-button whatsapp" onclick="openWhatsApp()">تواصل عبر واتساب</button>
+        <button class="contact-button email" onclick="openEmail()">تواصل عبر البريد الإلكتروني</button>
+        <button class="button" onclick="closePopup()">إغلاق</button>
+    </div>
+</div>
+
+        </section>
+
+        <!-- مربع الحسابات الأخرى -->
+        <section class="other-accounts">
+            <div class="related-accounts">
+                <h2>حسابات أخرى</h2>
+                <div class="account-cards-horizontal">
+                    <div class="account-card" onclick="location.href='account_details.html'">
+                        <div class="account-image">
+                            <img src="ip sh.jpg" alt="صورة الحساب">
+                        </div>
+                        <h3 class="account-name">حساب جواهر آيفون</h3>
+                        <p class="account-details">للآيفون والأيباد فقط</p>
+                        <div class="price-info">
+                            <span class="old-price">1312.50 درهم</span>
+                            <span class="new-price">522.24 درهم</span>
+                        </div>
+                    </div>
+                    <div class="account-card" onclick="location.href='acc.html'">
+                        <div class="account-image">
+                            <img src="an sh.jpg" alt="صورة الحساب">
+                        </div>
+                        <h3 class="account-name">حساب جواهر اندرويد</h3>
+                        <p class="account-details">  للاندرويد والكمبيوتر</p>
+                        <div class="price-info">
+                            <span class="old-price">47.93 درهم</span>
+                            <span class="new-price">36.46 درهم</span>
+                        </div>
+                    </div>
+                    <div class="account-card" onclick="location.href='ip rg.html'">
+                        <div class="account-image">
+                            <img src="ip rg.jpg" alt="صورة الحساب">
+                        </div>
+                        <h3 class="account-name">حساب جواهر آيفون</h3>
+                        <p class="account-details">للآيفون والأيباد فقط</p>
+                        <div class="price-info">
+                            <span class="old-price">419.19 درهم</span>
+                            <span class="new-price">128.38 درهم</span>
+                        </div>
+                    </div>          
+                    <!-- كرر البطاقات حسب الحاجة -->
+        </section
+        <!-- نافذة العرض الكبيرة -->
+        <div id="imageModal" class="modal" onclick="closeImage()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="fullImage">
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
